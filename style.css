@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --black10: hsl(240, 2%, 9%);
+  --grey: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+  body {
+    background: var(--black10);
+    background-image: url(images/Desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+  }
+
+  main {
+    background: url(images/Mobile.png);
+    width: 375px;
+    height: 812px;
+    border-radius: 10px;
+  }
+
+  .bloco {
+    width: 80px;
+    position: relative;
+    margin-left: 85px;
+    z-index: 1;
+    top: -100px;
+  }
+  .linha {
+    position: relative;
+    top: -115px;
+  }
+
+  .container {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--grey);
+  }
+
+  .avatar {
+    width: 10rem;
+    margin: 0.5rem auto 0;
+    position: relative; /*relaitve define a altura para o avatar span*/
+  }
+
+  .avatar span {
+    position: absolute;
+    top: -15px;
+    left: 100px;
+    /*adicionando profundidade*/
+    z-index: 1;
+  }
+
+  /*capturar a imagem do primeiro nível*/
+  .avatar > img {
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover; /*faz a imagem se adaptar a altura e largura*/
+
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 1% 75%, 0 25%);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  a {
+    color: var(--grey);
+    text-decoration: none;
+
+    margin-top: 0.25rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+
+  .habilidades img {
+    width: 20px;
+  }
+
+  ul {
+    margin-top: 2rem;
+
+    /*retirando os pontos*/
+    list-style: none;
+    padding: 0;
+
+    /*organizando as caixas uma ao lado da outra*/
+    display: flex;
+    gap: 0.5rem;
+
+    justify-content: center;
+  }
+
+  .icons img {
+    width: 50px;
+    border-radius: 10px;
+  }
+
